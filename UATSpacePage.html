@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Omar's UAT Space Page</title>
+    <script src="Code.js"></script>
+    <script src="dataLoader.js"></script>
+    <script src="launchDataDis.js"></script>
+    <link rel="stylesheet" href="BlastoffStyle.css">
+
+</head>
+
+<body>
+    <table>
+        <td>
+            <img src="UATspaceLogo.jpg" alt="Space Logo">
+        </td>
+        <td>
+            <h1>
+               <strong> UAT Space Program</strong>
+            </h1>
+            
+        </td>
+    </table>
+
+    <table id="data" width="70%" border="2">
+        <col style="width: 35%">
+        <col style="width: 35%">
+        <thead>
+            <tr style="font-family: 'Times New Roman', Times, serif"></tr>
+            <th>Data Type</th>
+            <th>Reading</th>
+        </thead>
+        <tbody>
+            <tr id="seconds"></tr>
+            <tr id="latitude"></tr>
+            <tr id="lomgitude"></tr>
+            <tr id="gpsSensor_alt"></tr>
+            <tr id="bmpSensor_alt"></tr>
+            <tr id="bmpSensor_pres"></tr>
+            <tr id="bmpSensor_temp"></tr>
+            <tr id="digSensor_temp"></tr>
+            <tr id="cssSensor_temp"></tr>
+            <tr id="cssSensor_eCO2"></tr>
+            <tr id="cssSensor_TVOC"></tr>
+            <tr id="UV"></tr>
+            <tr id="accelX"></tr>
+            <tr id="accelY"></tr>
+            <tr id="accelZ"></tr>
+            <tr id="magneticX"></tr>
+            <tr id="magneticY"></tr>
+            <tr id="magneticZ"></tr>
+            <tr id="gyroX"></tr>
+            <tr id="gyroY"></tr>
+            <tr id="gyroZ"></tr>
+        </tbody>
+    </table>
+    <br>
+    The current time is:<div id="clockTime">Press start for current time</div>
+
+
+    
+    <!--Countdown Controls-->
+    <br>
+    <button onclick="start();countDown();"class="button" id="startButton">Start</button> 
+    <button onclick="stop();" class="button" id="stopButton">Stop</button>
+    <br>
+    <br>
+    <!--Sound Controls-->
+    <button class="lgButton" onclick="playStation();">Play Space Station Sounds</button>
+    <br>
+    <br>
+    <!--Craps Game-->
+    <h2 id = "blink">Let's Play Craps</h2>
+    <br>
+    <div id="crapsRes">Craps results</div>
+    <div id="die1Res">die1 results</div>
+    <div id="die2Res">die2 results</div>
+    <div id="sumRes">sum results</div>
+    <button onclick="startCraps();" class="button">Play Craps</button>
+
+    <script type="text/javascript">
+        var blink = document.getElementById('blink');
+        setInterval(function() {
+            blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
+        }, 1500);
+        
+    </script>
+</body>
+
+</html>
